@@ -1,125 +1,74 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en-us">
+
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <title>Online Hangman</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <!-- <link href='https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah' rel='stylesheet' type='text/css'> -->
-    <script type="text/javascript" src="script.js"></script>
-    <!-- <script>window.onload = draw;</script> -->
+    <title>Psychic Game</title>
 </head>
 
 <body>
-    <div id="introPage">
-        <div id="introText">
-            <p>Hangman Game</p>
-        <p id="categoryName"></p>
-        <div id="wordWrap">
-            <div id="underline1">
-                <div id="letter1"></div>
-            </div>
-            <div id="underline2">
-                <div id="letter2"></div>
-            </div>
-            <div id="underline3">
-                <div id="letter3"></div>
-            </div>
-            <div id="underline4">
-                <div id="letter4"></div>
-            </div>
-            <div id="underline5">
-                <div id="letter5"></div>
-            </div>
-            <div id="underline6">
-                <div id="letter6"></div>
-            </div>
-            <div id="underline7">
-                <div id="letter7"></div>
-            </div>
-            <div id="underline8">
-                <div id="letter8"></div>
-            </div>
-            <div id="underline9">
-                <div id="letter9"></div>
-            </div>
-            <div id="underline10">
-                <div id="letter10"></div>
-            </div>
-            <div id="underline11">
-                <div id="letter11"></div>
-            </div>
-            <div id="underline12">
-                <div id="letter12"></div>
-            </div>
-            <div id="underline13">
-                <div id="letter13"></div>
-            </div>
-            <div id="underline14">
-                <div id="letter14"></div>
-            </div>
-            <div id="underline15">
-                <div id="letter15"></div>
-            </div>
-            <div id="underline16">
-                <div id="letter16"></div>
-            </div>
-            <div id="underline17">
-                <div id="letter17"></div>
-            </div>
-            <div id="underline18">
-                <div id="letter18"></div>
-            </div>
-            <div id="underline19">
-                <div id="letter19"></div>
-            </div>
-            <div id="underline20">
-                <div id="letter20"></div>
-            </div>
-            <div id="underline21">
-                <div id="letter21"></div>
-            </div>
-            <div id="underline22">
-                <div id="letter22"></div>
-            </div>
-            <div id="underline23">
-                <div id="letter23"></div>
-            </div>
-            <div id="underline24">
-                <div id="letter24"></div>
-            </div>
-            <div id="underline25">
-                <div id="letter25"></div>
-            </div>
-            <div id="underline26">
-                <div id="letter26"></div>
-            </div>
-            <div id="underline27">
-                <div id="letter27"></div>
-            </div>
-            <div id="underline28">
-                <div id="letter28"></div>
-            </div>
-            <div id="underline29">
-                <div id="letter29"></div>
-            </div>
-            <div id="underline30">
-                <div id="letter30"></div>
-            </div>
-         </div>
-        <div id="results"></div>
-        <div id="letterBank">
-                <div id="a" value="A" onclick="guessLetter()">A</div><div id="b" value="B" onclick="guessLetter()">B</div><div id="c" value="C" onclick="guessLetter()">C</div><div id="d" value="D" onclick="guessLetter()">D</div><div id="e" value="E" onclick="guessLetter()">E</div><div id="f" value="F" onclick="guessLetter()">F</div><div id="g" value="G" onclick="guessLetter()">G</div><div id="h" value="H" onclick="guessLetter()">H</div><div id="i" value="I" onclick="guessLetter()">I</div><div id="j" value="J" onclick="guessLetter()">J</div><div id="k" value="K" onclick="guessLetter()">K</div><div id="l" value="L" onclick="guessLetter()">L</div><div id="m" value="M" onclick="guessLetter()">M</div><div id="n" value="N" onclick="guessLetter()">N</div><div id="o" value="O" onclick="guessLetter()">O</div><div id="p" value="P" onclick="guessLetter()">P</div><div id="q" value="Q" onclick="guessLetter()">Q</div><div id="r" value="R" onclick="guessLetter()">R</div><div id="s" value="S" onclick="guessLetter()">S</div><div id="t" value="T" onclick="guessLetter()">T</div><div id="u" value="U" onclick="guessLetter()">U</div><div id="v" value="V" onclick="guessLetter()">V</div><div id="w" value="W" onclick="guessLetter()">W</div><div id="x" value="X" onclick="guessLetter()">X</div><div id="y" value="Y" onclick="guessLetter()">Y</div><div id="z" value="Z" onclick="guessLetter()">Z</div>
+    <div id="all">
+        <h1 id="h1">The Psychic Game</h1>
+        <div id="para">
+            <p id="p1">Choose a number from 1-100!</p>
+            <p id="p2">We will tell you if you are getting warmer</p>
         </div>
-        <div id="challengeBank">
-                <div id="a" value="A" onclick="challengeGuess()">A</div><div id="b" value="B" onclick="challengeGuess()">B</div><div id="c" value="C" onclick="challengeGuess()">C</div><div id="d" value="D" onclick="challengeGuess()">D</div><div id="e" value="E" onclick="challengeGuess()">E</div><div id="f" value="F" onclick="challengeGuess()">F</div><div id="g" value="G" onclick="challengeGuess()">G</div><div id="h" value="H" onclick="challengeGuess()">H</div><div id="i" value="I" onclick="challengeGuess()">I</div><div id="j" value="J" onclick="challengeGuess()">J</div><div id="k" value="K" onclick="challengeGuess()">K</div><div id="l" value="L" onclick="challengeGuess()">L</div><div id="m" value="M" onclick="challengeGuess()">M</div><div id="n" value="N" onclick="challengeGuess()">N</div><div id="o" value="O" onclick="challengeGuess()">O</div><div id="p" value="P" onclick="challengeGuess()">P</div><div id="q" value="Q" onclick="challengeGuess()">Q</div><div id="r" value="R" onclick="challengeGuess()">R</div><div id="s" value="S" onclick="challengeGuess()">S</div><div id="t" value="T" onclick="challengeGuess()">T</div><div id="u" value="U" onclick="challengeGuess()">U</div><div id="v" value="V" onclick="challengeGuess()">V</div><div id="w" value="W" onclick="challengeGuess()">W</div><div id="x" value="X" onclick="challengeGuess()">X</div><div id="y" value="Y" onclick="challengeGuess()">Y</div><div id="z" value="Z" onclick="challengeGuess()">Z</div>
-        </div>
-        <div id="again" onClick="reset()">Play again!</div>
-        <div id="home" onClick="window.location.reload()">Main menu</div>
-        <p id="vidSent">Click <span id="vidLink" onClick="video()">here</span> to watch and learn how this website functions.</p>
+        <h2 id="h2"> Good luck</h2>
+        <input type="text" id="input" placeholder="Enter your guess"></input>
+        <button>Guess</button>
     </div>
-        <div id="home1" onClick="window.location.reload()">Main menu</div>
-    </div>
+    <p id="output1"></p>
+
+    <script type="text/javascript">
+
+        var guess = 0;
+        var computer = (Math.random() * 100);
+        var guessRemaining = 10;
+        var guessMade = 0;
+        var gameStatus;
+        var winner = false;
+
+        var input1 = document.querySelector("#input");
+        var output1 = document.querySelector("#output");
+
+        var btn = document.querySelector("button");
+
+        btn.addEventListener("click", onMouseClick);
+
+        function onMouseClick() {
+            guess = parseInt(input1.value);
+            guessRemaining--;
+            guessMade++;
+            gameStatus = "You have " + guessRemaining;
+    }
+
+        if (guess > computer) {
+            output1.innerHTML = "Your guess is too high" + gameStatus;
+            if (guessRemaining < 1) {
+                gameEnd();
+            }
+        } else if (guess > computer) {
+            output1.innerHTML = "Your guess is too low" + gameStatus;
+            if (guessRemaining < 1) {
+                gameEnd();
+            }
+        } else if (guess === computer) {
+            output1.innerHTML = "You are absolutely right!" + gameStatus;
+            gameEnd();
+        }
+    }
+
+        function gameEnd() {
+            if (winner) {
+                output1.innerHTML = "Congratulations!"
+            } else {
+                output1.innerHTML = "Oh No! The number was " + computer + ". Try again."
+            }
+        }
+
+    </script>
+
 </body>
+
 </html>

@@ -41,7 +41,7 @@
             guessRemaining--;
             guessMade++;
             gameStatus = "You have " + guessRemaining;
-    }
+        }
 
         if (guess > computer) {
             output1.innerHTML = "Your guess is too high" + gameStatus;
@@ -57,7 +57,6 @@
             output1.innerHTML = "You are absolutely right!" + gameStatus;
             gameEnd();
         }
-    }
 
         function gameEnd() {
             if (winner) {
